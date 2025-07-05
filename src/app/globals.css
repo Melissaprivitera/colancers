@@ -1,19 +1,28 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  /* Colancers Brand Colors - Vibrant & Colorful */
-  --background: #f8fafc; /* Light blue-gray background */
-  --foreground: #000000; /* Pure black for maximum contrast */
-  --primary: #3b82f6; /* Vibrant blue */
-  --secondary: #8b5cf6; /* Purple */
-  --accent: #f59e0b; /* Golden orange */
+  /* Colancers Brand Colors - High Contrast */
+  --background: #f5f5f5; /* Light gray background */
+  --foreground: #1a0f12; /* Very dark plum for maximum readability */
+  --primary: #d32f2f; /* Deep red for strong contrast */
+  --secondary: #e57373; /* Brighter rose */
+  --accent: #ff9800; /* Vibrant orange for visibility */
   
   /* Fonts */
   --font-logo: var(--font-pacifico), 'Pacifico', cursive;
   --font-ui: var(--font-arimo), 'Arimo', sans-serif;
 }
 
-
+/* Custom color utilities - High Contrast */
+:root {
+  --color-cream: #f5f5f5;
+  --color-coral: #d32f2f;
+  --color-plum: #1a0f12;
+  --color-rose: #e57373;
+  --color-soft-yellow: #ff9800;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -29,7 +38,28 @@ body {
   line-height: 1.6;
 }
 
+/* Custom utility classes for brand colors */
+.text-coral { color: #d32f2f; }
+.text-plum { color: #1a0f12; }
+.text-rose { color: #e57373; }
+.text-soft-yellow { color: #ff9800; }
 
+.bg-cream { background-color: #f5f5f5; }
+.bg-coral { background-color: #d32f2f; }
+.bg-plum { background-color: #1a0f12; }
+.bg-rose { background-color: #e57373; }
+.bg-soft-yellow { background-color: #ff9800; }
+
+.bg-coral\/10 { background-color: rgba(211, 47, 47, 0.1); }
+.bg-soft-yellow\/10 { background-color: rgba(255, 152, 0, 0.1); }
+.bg-rose\/10 { background-color: rgba(229, 115, 115, 0.1); }
+
+.text-plum\/80 { color: rgba(26, 15, 18, 0.8); }
+.text-plum\/70 { color: rgba(26, 15, 18, 0.7); }
+.text-white\/90 { color: rgba(255, 255, 255, 0.9); }
+.text-white\/70 { color: rgba(255, 255, 255, 0.7); }
+
+.border-rose\/20 { border-color: rgba(229, 115, 115, 0.2); }
 
 /* Logo font */
 .font-logo {
@@ -38,22 +68,51 @@ body {
 
 /* Button styles */
 .btn-primary {
-  @apply bg-coral text-white rounded-xl px-6 py-3 font-bold transition-colors duration-200;
+  background-color: #d32f2f;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
 }
 
 .btn-primary:hover {
-  @apply bg-blue-700;
+  background-color: #b71c1c; /* Even darker red for maximum contrast */
 }
 
 .btn-secondary {
-  @apply border-2 border-coral text-coral bg-transparent rounded-xl px-6 py-3 font-bold transition-all duration-200;
+  border: 1.5px solid #d32f2f;
+  color: #d32f2f;
+  background: transparent;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  transition: all 0.2s ease;
 }
 
 .btn-secondary:hover {
-  @apply bg-blue-50 shadow-lg;
+  background-color: #fff3e0; /* Light orange background for better contrast */
+  box-shadow: 0px 2px 8px rgba(26, 15, 18, 0.2);
 }
 
 /* Card styles */
 .card {
-  @apply bg-white rounded-2xl shadow-lg p-6 border border-blue-100;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 2px 8px rgba(26, 15, 18, 0.1);
+  padding: 24px;
+  border: 1px solid rgba(26, 15, 18, 0.05);
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

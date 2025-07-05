@@ -19,9 +19,10 @@ export default function Home() {
               <span className="font-logo text-2xl text-coral">colancers</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#features" className="text-violet hover:text-coral transition-colors">Features</a>
-              <a href="#how-it-works" className="text-violet hover:text-coral transition-colors">How it Works</a>
-              <a href="#about" className="text-violet hover:text-coral transition-colors">About</a>
+              <a href="#features" className="text-plum hover:text-coral transition-colors">Features</a>
+              <a href="#how-it-works" className="text-plum hover:text-coral transition-colors">How it Works</a>
+              <a href="/verify" className="text-plum hover:text-coral transition-colors">Verify</a>
+              <a href="#about" className="text-plum hover:text-coral transition-colors">About</a>
             </nav>
             <div className="flex space-x-4">
               <ConnectWallet />
@@ -43,11 +44,11 @@ export default function Home() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-violet mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-plum mb-6">
               Collaborative
               <span className="block text-coral font-logo">Freelancing</span>
             </h1>
-            <p className="text-xl text-violet/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-xl text-plum/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Join collaborative service teams, get paid fairly, and build verified reputation 
               using ENS names, World ID verification, and Flare's FDC for skill verification.
             </p>
@@ -67,8 +68,8 @@ export default function Home() {
       <section id="features" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-violet mb-4">Why Choose Colancers?</h2>
-            <p className="text-xl text-violet/70 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-plum mb-4">Why Choose Colancers?</h2>
+            <p className="text-xl text-plum/70 max-w-2xl mx-auto">
               Built for the future of work with decentralized identity and fair compensation
             </p>
           </div>
@@ -79,8 +80,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-coral/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🆔</span>
               </div>
-              <h3 className="text-xl font-bold text-violet mb-3">ENS Identity Management</h3>
-              <p className="text-violet/70">
+              <h3 className="text-xl font-bold text-plum mb-3">ENS Identity Management</h3>
+              <p className="text-plum/70">
                 Use ENS names for decentralized identity. Set up secondary names with avatars 
                 and tie all skills, projects, and reputation to your ENS domain.
               </p>
@@ -91,8 +92,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-soft-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌍</span>
               </div>
-              <h3 className="text-xl font-bold text-violet mb-3">World ID Integration</h3>
-              <p className="text-violet/70">
+              <h3 className="text-xl font-bold text-plum mb-3">World ID Integration</h3>
+              <p className="text-plum/70">
                 Unique human verification prevents duplicate registrations. 
                 One person, one account policy with privacy-preserving identity verification.
               </p>
@@ -103,8 +104,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-rose/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⭐</span>
               </div>
-              <h3 className="text-xl font-bold text-violet mb-3">Skill Verification</h3>
-              <p className="text-violet/70">
+              <h3 className="text-xl font-bold text-plum mb-3">Skill Verification</h3>
+              <p className="text-plum/70">
                 Verify skills through Flare's Flare Data Connector (FDC). 
                 On-chain credential verification with cross-referencing from multiple sources.
               </p>
@@ -115,8 +116,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-coral/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💰</span>
               </div>
-              <h3 className="text-xl font-bold text-violet mb-3">Fair Payment System</h3>
-              <p className="text-violet/70">
+              <h3 className="text-xl font-bold text-plum mb-3">Fair Payment System</h3>
+              <p className="text-plum/70">
                 Smart contract-based payment distribution with transparent compensation 
                 based on contribution and automated payment processing.
               </p>
@@ -127,8 +128,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-soft-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📊</span>
               </div>
-              <h3 className="text-xl font-bold text-violet mb-3">Reputation System</h3>
-              <p className="text-violet/70">
+              <h3 className="text-xl font-bold text-plum mb-3">Reputation System</h3>
+              <p className="text-plum/70">
                 Verifiable reputation through client reviews, skill endorsements, 
                 certifications, and on-chain reputation tracking.
               </p>
@@ -139,8 +140,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-rose/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">👥</span>
               </div>
-              <h3 className="text-xl font-bold text-violet mb-3">Collaborative Teams</h3>
-              <p className="text-violet/70">
+              <h3 className="text-xl font-bold text-plum mb-3">Collaborative Teams</h3>
+              <p className="text-plum/70">
                 Join and manage team projects, track team performance and contributions, 
                 and develop skills collaboratively.
               </p>
@@ -152,10 +153,10 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-coral to-rose">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-plum mb-6">
             Ready to Start Your Collaborative Journey?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-plum mb-8">
             Join thousands of freelancers building the future of work together
           </p>
           <button className="bg-white text-coral font-bold px-8 py-4 rounded-12 hover:bg-cream transition-colors">
@@ -165,7 +166,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-violet text-white py-12">
+      <footer className="bg-plum text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>

@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
-
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
@@ -43,6 +42,11 @@ contract PaymentContract is ReentrancyGuard, Ownable {
     mapping(uint256 => Payment) public payments;
     mapping(address => uint256[]) public userProjects;
     mapping(address => uint256[]) public userPayments;
+    
+    /**
+     * @dev Constructor that initializes the contract with the deployer as the owner
+     */
+    constructor(address admin) Ownable(admin) {}
     
     event ProjectCreated(uint256 indexed projectId, address indexed client, uint256 budget, string currency);
     event MemberAdded(uint256 indexed projectId, address indexed member, uint256 contribution);

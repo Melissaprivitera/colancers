@@ -18,8 +18,8 @@ const arimo = Arimo({
 });
 
 export const metadata: Metadata = {
-  title: "Colancers - Collaborative Freelancer Teams",
-  description: "Join collaborative service teams, get paid fairly, and build verified reputation using ENS names, World ID verification, and Flare's FDC for skill verification.",
+  title: "CoLancers - Collaborative Freelancing",
+  description: "Join collaborative service teams, get paid fairly, and build verified reputation using Web3 technology.",
   keywords: "freelancers, collaboration, web3, ENS, World ID, Flare, blockchain, reputation",
 };
 
