@@ -63,16 +63,16 @@ export function SkillVerification({ skills, onSkillVerified }: SkillVerification
         <div className="w-8 h-8 bg-rose/20 rounded-full flex items-center justify-center">
           <span className="text-lg">⭐</span>
         </div>
-        <h3 className="text-xl font-bold text-plum">Skill Verification</h3>
+        <h3 className="text-xl font-bold text-violet">Skill Verification</h3>
       </div>
       
       <div className="space-y-4">
-        <p className="text-plum/70">
+        <p className="text-violet/70">
           Verify your skills through Flare's Flare Data Connector (FDC) for on-chain credential verification.
         </p>
         
         {skills.length === 0 ? (
-          <div className="text-center py-8 text-plum/50">
+          <div className="text-center py-8 text-violet/50">
             <p>No skills added yet</p>
             <p className="text-sm">Add skills to your profile to verify them</p>
           </div>
@@ -84,8 +84,8 @@ export function SkillVerification({ skills, onSkillVerified }: SkillVerification
                 className="flex items-center justify-between p-3 border border-gray-200 rounded-lg"
               >
                 <div>
-                  <h4 className="font-medium text-plum">{skill.name}</h4>
-                  <p className="text-sm text-plum/70 capitalize">{skill.level}</p>
+                  <h4 className="font-medium text-violet">{skill.name}</h4>
+                  <p className="text-sm text-violet/70 capitalize">{skill.level}</p>
                 </div>
                 
                 <div className="flex items-center space-x-2">
@@ -106,7 +106,7 @@ export function SkillVerification({ skills, onSkillVerified }: SkillVerification
           </div>
         )}
         
-        <div className="text-xs text-plum/50">
+        <div className="text-xs text-violet/50">
           <p>• On-chain credential verification</p>
           <p>• Cross-referencing with multiple sources</p>
           <p>• Tamper-proof skill validation</p>

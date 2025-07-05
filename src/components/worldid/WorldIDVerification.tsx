@@ -46,11 +46,11 @@ export function WorldIDVerification({ verification, onVerificationComplete }: Wo
         <div className="w-8 h-8 bg-soft-yellow/20 rounded-full flex items-center justify-center">
           <span className="text-lg">🌍</span>
         </div>
-        <h3 className="text-xl font-bold text-plum">World ID Verification</h3>
+        <h3 className="text-xl font-bold text-violet">World ID Verification</h3>
       </div>
       
       <div className="space-y-4">
-        <p className="text-plum/70">
+        <p className="text-violet/70">
           Verify that you are a unique human to prevent duplicate registrations and ensure fair participation.
         </p>
         
@@ -76,7 +76,7 @@ export function WorldIDVerification({ verification, onVerificationComplete }: Wo
           </div>
         )}
         
-        <div className="text-xs text-plum/50">
+        <div className="text-xs text-violet/50">
           <p>• One person, one account policy</p>
           <p>• Privacy-preserving verification</p>
           <p>• No personal data collected</p>

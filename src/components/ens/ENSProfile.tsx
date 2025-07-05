@@ -38,11 +38,11 @@ export function ENSProfile({ profile, onProfileUpdate }: ENSProfileProps) {
 
   return (
     <div className="card">
-      <h3 className="text-xl font-bold text-plum mb-4">ENS Profile</h3>
+      <h3 className="text-xl font-bold text-violet mb-4">ENS Profile</h3>
       
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-plum mb-2">
+          <label className="block text-sm font-medium text-violet mb-2">
             ENS Name
           </label>
           <input
@@ -55,7 +55,7 @@ export function ENSProfile({ profile, onProfileUpdate }: ENSProfileProps) {
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-plum mb-2">
+          <label className="block text-sm font-medium text-violet mb-2">
             Avatar URL
           </label>
           <input
@@ -77,7 +77,7 @@ export function ENSProfile({ profile, onProfileUpdate }: ENSProfileProps) {
                 e.currentTarget.style.display = 'none';
               }}
             />
-            <span className="text-sm text-plum/70">Avatar preview</span>
+            <span className="text-sm text-violet/70">Avatar preview</span>
           </div>
         )}
         
