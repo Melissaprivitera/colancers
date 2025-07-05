@@ -1,15 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colancers Brand Colors - Improved Contrast */
+  --background: #fff9f6; /* Lighter cream for better contrast */
+  --foreground: #2d1b1f; /* Darker plum for better readability */
+  --primary: #e63946; /* Darker coral for better contrast */
+  --secondary: #f28482; /* Adjusted rose */
+  --accent: #fbbf24; /* Brighter yellow for better visibility */
+  
+  /* Fonts */
+  --font-logo: var(--font-pacifico), 'Pacifico', cursive;
+  --font-ui: var(--font-arimo), 'Arimo', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom color utilities - Improved Contrast */
+:root {
+  --color-cream: #fff9f6;
+  --color-coral: #e63946;
+  --color-plum: #2d1b1f;
+  --color-rose: #f28482;
+  --color-soft-yellow: #fbbf24;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +32,60 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ui), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom utility classes for brand colors */
+.text-coral { color: var(--color-coral); }
+.text-plum { color: var(--color-plum); }
+.text-rose { color: var(--color-rose); }
+.text-soft-yellow { color: var(--color-soft-yellow); }
+
+.bg-cream { background-color: var(--color-cream); }
+.bg-coral { background-color: var(--color-coral); }
+.bg-plum { background-color: var(--color-plum); }
+.bg-rose { background-color: var(--color-rose); }
+.bg-soft-yellow { background-color: var(--color-soft-yellow); }
+
+/* Logo font */
+.font-logo {
+  font-family: var(--font-logo);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--color-coral);
+  color: white;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d32f2f; /* Darker red for better contrast */
+}
+
+.btn-secondary {
+  border: 1.5px solid var(--color-coral);
+  color: var(--color-coral);
+  background: transparent;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #fef3c7; /* Light yellow background for better contrast */
+  box-shadow: 0px 2px 8px rgba(45, 27, 31, 0.15);
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 2px 8px rgba(93, 56, 62, 0.05);
+  padding: 24px;
 }

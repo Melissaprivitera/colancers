@@ -1,102 +1,217 @@
 import Image from "next/image";
+import { ConnectWallet } from "@/components/ConnectWallet";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-cream">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b border-rose/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-3">
+              <Image
+                src="/images/logo.svg"
+                alt="Colancers Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
+              <span className="font-logo text-2xl text-coral">colancers</span>
+            </div>
+            <nav className="hidden md:flex space-x-8">
+              <a href="#features" className="text-plum hover:text-coral transition-colors">Features</a>
+              <a href="#how-it-works" className="text-plum hover:text-coral transition-colors">How it Works</a>
+              <a href="#about" className="text-plum hover:text-coral transition-colors">About</a>
+            </nav>
+            <div className="flex space-x-4">
+              <ConnectWallet />
+              <button className="btn-primary">Get Started</button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/images/pattern.svg"
+            alt="Background Pattern"
+            fill
+            className="object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-plum mb-6">
+              Collaborative
+              <span className="block text-coral font-logo">Freelancing</span>
+            </h1>
+            <p className="text-xl text-plum/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Join collaborative service teams, get paid fairly, and build verified reputation 
+              using ENS names, World ID verification, and Flare's FDC for skill verification.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="btn-primary text-lg px-8 py-4">
+                Start Collaborating
+              </button>
+              <button className="btn-secondary text-lg px-8 py-4">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-plum mb-4">Why Choose Colancers?</h2>
+            <p className="text-xl text-plum/70 max-w-2xl mx-auto">
+              Built for the future of work with decentralized identity and fair compensation
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* ENS Identity */}
+            <div className="card text-center">
+              <div className="w-16 h-16 bg-coral/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🆔</span>
+              </div>
+              <h3 className="text-xl font-bold text-plum mb-3">ENS Identity Management</h3>
+              <p className="text-plum/70">
+                Use ENS names for decentralized identity. Set up secondary names with avatars 
+                and tie all skills, projects, and reputation to your ENS domain.
+              </p>
+            </div>
+
+            {/* World ID */}
+            <div className="card text-center">
+              <div className="w-16 h-16 bg-soft-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🌍</span>
+              </div>
+              <h3 className="text-xl font-bold text-plum mb-3">World ID Integration</h3>
+              <p className="text-plum/70">
+                Unique human verification prevents duplicate registrations. 
+                One person, one account policy with privacy-preserving identity verification.
+              </p>
+            </div>
+
+            {/* Flare FDC */}
+            <div className="card text-center">
+              <div className="w-16 h-16 bg-rose/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⭐</span>
+              </div>
+              <h3 className="text-xl font-bold text-plum mb-3">Skill Verification</h3>
+              <p className="text-plum/70">
+                Verify skills through Flare's Flare Data Connector (FDC). 
+                On-chain credential verification with cross-referencing from multiple sources.
+              </p>
+            </div>
+
+            {/* Fair Payment */}
+            <div className="card text-center">
+              <div className="w-16 h-16 bg-coral/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">💰</span>
+              </div>
+              <h3 className="text-xl font-bold text-plum mb-3">Fair Payment System</h3>
+              <p className="text-plum/70">
+                Smart contract-based payment distribution with transparent compensation 
+                based on contribution and automated payment processing.
+              </p>
+            </div>
+
+            {/* Reputation */}
+            <div className="card text-center">
+              <div className="w-16 h-16 bg-soft-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="text-xl font-bold text-plum mb-3">Reputation System</h3>
+              <p className="text-plum/70">
+                Verifiable reputation through client reviews, skill endorsements, 
+                certifications, and on-chain reputation tracking.
+              </p>
+            </div>
+
+            {/* Teams */}
+            <div className="card text-center">
+              <div className="w-16 h-16 bg-rose/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">👥</span>
+              </div>
+              <h3 className="text-xl font-bold text-plum mb-3">Collaborative Teams</h3>
+              <p className="text-plum/70">
+                Join and manage team projects, track team performance and contributions, 
+                and develop skills collaboratively.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-coral to-rose">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Start Your Collaborative Journey?
+          </h2>
+          <p className="text-xl text-white/90 mb-8">
+            Join thousands of freelancers building the future of work together
+          </p>
+          <button className="bg-white text-coral font-bold px-8 py-4 rounded-12 hover:bg-cream transition-colors">
+            Get Started Now
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-plum text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
+                <Image
+                  src="/images/logo.svg"
+                  alt="Colancers Logo"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8"
+                />
+                <span className="font-logo text-xl text-coral">colancers</span>
+              </div>
+              <p className="text-white/70">
+                Building the future of collaborative freelancing with Web3 technology.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Product</h4>
+              <ul className="space-y-2 text-white/70">
+                <li><a href="#" className="hover:text-coral transition-colors">Features</a></li>
+                <li><a href="#" className="hover:text-coral transition-colors">Pricing</a></li>
+                <li><a href="#" className="hover:text-coral transition-colors">Documentation</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Company</h4>
+              <ul className="space-y-2 text-white/70">
+                <li><a href="#" className="hover:text-coral transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-coral transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-coral transition-colors">Careers</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Support</h4>
+              <ul className="space-y-2 text-white/70">
+                <li><a href="#" className="hover:text-coral transition-colors">Help Center</a></li>
+                <li><a href="#" className="hover:text-coral transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-coral transition-colors">Status</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
+            <p>&copy; 2024 Colancers. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
